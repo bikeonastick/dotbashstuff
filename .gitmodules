@@ -1,3 +1,6 @@
 [submodule "borrowed/solarized"]
 	path = borrowed/solarized
 	url = https://github.com/altercation/solarized.git
+[submodule "borrowed/iterm2-colors-solarized-toggle"]
+	path = borrowed/iterm2-colors-solarized-toggle
+	url = git@github.com:jaywilliams/iterm2-colors-solarized-toggle.git
