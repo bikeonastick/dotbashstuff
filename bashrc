@@ -1,11 +1,13 @@
-source ~/.rldevrc
-source /Users/robertt/.rvm/scripts/rvm
+#source ~/.devrc
+#source /Users/robertt/.rvm/scripts/rvm
 
 # added for git commandline completion
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="auto"
+# mkdir ~/lib
+# wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/lib/git-completion.bash
 source ~/lib/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-completion.bash
 export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[136m\]\w\[\033[36m\]$(__git_ps1)\[\033[00m\]\$ '
