@@ -10,8 +10,16 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 # wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/lib/git-completion.bash
 source ~/dotbashstuff/borrowed/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-completion.bash
-export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[136m\]\w\[\033[36m\]$(__git_ps1)\[\033[00m\]\$ '
-# end added for git commandline completion
+export LONG_PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[136m\]\w\[\033[36m\]$(__git_ps1)\[\033[00m\]\$ '
+export SHORT_PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[136m\]\W\[\033[36m\]$(__git_ps1)\[\033[00m\]\$ '
+export PS1=$LONG_PS1
+export PREV_PS1=$SHORT_PS1
+
+function tps1 () {
+  local hold_ps1=$PS1
+  PS1=$PREV_PS1
+  PREV_PS1=$hold_ps1
+}
 
 export JAVA_HOME=`/usr/libexec/java_home`
 set -o vi
