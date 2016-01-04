@@ -13,7 +13,14 @@ Not much cool here. Just finding a safe location for my configs.
 1. link the bash_profile in this repo to .bash_profile in your homedir
 
     `ln -s ~/dotbashstuff/bash_profile ~/.bash_profile` 
+1. update submodules
 
+    `git submodule init`
+
+1. link toggle solarized script
+
+    `mkdir -p ~/Library/Application\ Support/iTerm/Scripts`
+    `ln -s ~/dotbashstuff/borrowed/iterm2-colors-solarized-toggle/Toggle\ Solarized.scpt ~/Library/Application\ Support/iTerm/Scripts/Toggle\ Solarized.scpt`
 
 
 ## License

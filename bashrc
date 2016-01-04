@@ -1,5 +1,7 @@
 #source ~/.devrc
 #source /Users/robertt/.rvm/scripts/rvm
+source '/usr/local/share/chruby/chruby.sh'
+source '/usr/local/share/chruby/auto.sh'
 
 # added for git commandline completion
 export GIT_PS1_SHOWDIRTYSTATE=1
@@ -58,4 +60,7 @@ function findPid(){
   echo "$tokill"
 }
 
-PATH=$HOME/bin:$JAVA_HOME/bin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$PATH 
+PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$HOME/bin:$JAVA_HOME/bin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$PATH 
+
+# added by travis gem
+[ -f /Users/robert.tomb/.travis/travis.sh ] && source /Users/robert.tomb/.travis/travis.sh
