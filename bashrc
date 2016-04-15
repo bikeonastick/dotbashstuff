@@ -60,7 +60,7 @@ function findPid(){
   echo "$tokill"
 }
 
-PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$HOME/bin:$JAVA_HOME/bin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$PATH 
+PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$HOME/bin:$JAVA_HOME/bin:$HOME/.rvm/bin:/usr/local/share/npm/bin:/usr/local/go/bin:$PATH 
 
 # added by travis gem
 [ -f /Users/robert.tomb/.travis/travis.sh ] && source /Users/robert.tomb/.travis/travis.sh
