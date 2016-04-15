@@ -8,6 +8,8 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="auto"
+
+export EDITOR='vim'
 # mkdir ~/lib
 # wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/lib/git-completion.bash
 source ~/dotbashstuff/borrowed/git-completion.bash
