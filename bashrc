@@ -2,6 +2,12 @@
 #source /Users/robertt/.rvm/scripts/rvm
 source '/usr/local/share/chruby/chruby.sh'
 source '/usr/local/share/chruby/auto.sh'
+if [ -d ".dotextras" ]; then
+  for f in `ls .dotextras`
+  do
+    source ".dotextras/$f"
+  done
+fi
 
 # added for git commandline completion
 export GIT_PS1_SHOWDIRTYSTATE=1
