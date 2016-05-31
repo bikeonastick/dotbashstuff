@@ -1,11 +1,15 @@
 #source ~/.devrc
 #source /Users/robertt/.rvm/scripts/rvm
+source '/usr/local/share/chruby/chruby.sh'
+source '/usr/local/share/chruby/auto.sh'
 
 # added for git commandline completion
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="auto"
+
+export EDITOR='vim'
 # mkdir ~/lib
 # wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/lib/git-completion.bash
 source ~/dotbashstuff/borrowed/git-completion.bash
@@ -58,4 +62,7 @@ function findPid(){
   echo "$tokill"
 }
 
-PATH=$HOME/bin:$JAVA_HOME/bin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$PATH 
+PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$HOME/bin:$JAVA_HOME/bin:$HOME/.rvm/bin:/usr/local/share/npm/bin:/usr/local/go/bin:$PATH 
+
+# added by travis gem
+[ -f /Users/robert.tomb/.travis/travis.sh ] && source /Users/robert.tomb/.travis/travis.sh
