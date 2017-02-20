@@ -68,6 +68,21 @@ function findPid(){
   echo "$tokill"
 }
 
+function findPidKill(){
+  if [ "$2" == "-v" ]; then
+    found=`ps -e | grep -i "$1" |grep -v grep`
+    echo "found:${found}"
+    echo ""
+  fi
+  tokill=`ps -e | grep -i "$1"| grep -v grep | cut -c 1-6`
+  arrtokill=(${tokill//\n/ })
+  for i in "${arrtokill[@]}"
+  do
+    echo "killing ${i}"
+    kill ${i}
+  done
+}
+
 PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$HOME/bin:$JAVA_HOME/bin:$HOME/.rvm/bin:/usr/local/share/npm/bin:/usr/local/go/bin:$PATH 
 
 # added by travis gem
