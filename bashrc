@@ -17,9 +17,7 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 
 export EDITOR='vim'
 # mkdir ~/lib
-# wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/lib/git-completion.bash
-source ~/dotbashstuff/borrowed/git-completion.bash
-source /usr/local/etc/bash_completion.d/git-completion.bash
+source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
 export LONG_PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[136m\]\w\[\033[36m\]$(__git_ps1)\[\033[00m\]\$ '
 export SHORT_PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[136m\]\W\[\033[36m\]$(__git_ps1)\[\033[00m\]\$ '
 export PS1=$LONG_PS1
